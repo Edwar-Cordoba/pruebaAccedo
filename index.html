@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Traductor</title>
+  </head>
+  <body>
+  	<header class="container-fluid bg-dark text-white p-3">
+  	  	<div class="row justify-content-around">
+  	    	<div class="col-6 text-center">
+  	       		<h1>Traductor Morse</h1>
+  	    	</div>
+  	   	</div>
+  	</header>
+    
+    <div class="container my-3">
+	    <div class="mb-3">
+	      <label for="input_frase" class="form-label">Texto en español</label>
+	      <input type="text" class="form-control" id="input_frase" placeholder="Ingrese solo texto en español">
+	      <div id="emailHelp" class="form-text">Para su correcto funcionamiento escribe solo texto</div>
+	    </div>
+	    <div class="mb-3">
+	      <label for="input_morse" class="form-label">Codigo morse</label>
+	      <input type="text" class="form-control" id="input_morse" placeholder="Ingrese solo codigo morse" >
+	      <div id="emailHelp" class="form-text">Para su correcto funcionamiento use un espacio entre cada letra</div>
+      </div>
+		  <div class="row">
+		    <div class="col-6 text-center">
+		      <button onclick="imprimir_codigo_morse()" class="btn btn-warning mb-3">Traducir de español a morse</button>
+		    </div>	
+		    <div class="col-6 text-center">
+		      <button onclick="imprimir_codigo_espaniol()" class="btn btn-warning mb-3">Traducir de morse a español</button>
+		    </div>
+	    </div>	
+    </div>
+
+    <div class="container lead" >
+    	<div class="row">
+    		<div  class="col-6  text-center">
+    			<h2>traduccion en codigo morse</h2>
+    			<div id="caja" class="fw-bold"></div>
+    		</div>
+    		<div class="col-6 lead text-center">
+    			<h2>Traduccion en español</h2>
+    			<div id="caja1" class="fw-bold"></div>
+    		</div>
+    	</div>
+    </div>
+  	
+    <script src="js/codigo_morse.js" ></script>
+  </body>
+</html>
